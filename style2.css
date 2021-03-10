@@ -1,15 +1,76 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
 *
 {
 	margin: 0;
-	padding: 0;
+	padding: 0;/*
 	box-sizing: border-box;
 	font-family: 'inter'; 
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;*/
 }
 body
 {
 	overflow-x: hidden;
     background: black;
+}
+.roll.nop
+{
+	overflow: hidden;
+}
+.roll.nop
+{
+	overflow: hidden;
 }
 .header
 {
@@ -20,23 +81,21 @@ body
 	display: flex;
     z-index: 2;
 	backdrop-filter: blur(5px);
-    transition: 0.5s;
+    transition: 1s;
     justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 10%;
+	padding-left: 10%;
+	align-items: center;
 }
 .header.acender
 {
     background: white;
     color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-              0 0 10px #03e9f4,
-              0 0 20px #03e9f4,
-              0 0 40px #03e9f4; 
+    box-shadow: 0 0 15px black;
 }
 .header a
 {
-    font-size: 2rem;
+    font-size: 16px;
 }
 .header.acender  .menu-btn__lines,
 .header.acender  .menu-btn__lines::before,
@@ -45,25 +104,14 @@ body
     background-color: black;
     box-shadow: 1px 1px 0.1em black;
 }
-.header.acender .menu-items.lightOn li a
-{
-    color: black;
-    text-shadow: 1px 1px 0.1em black;
-}
-.header.acender .menu-items.lightOn li a:hover
-{
-    transition: 1s;
-    color: #2196f3;
-    text-shadow: 1px 1px 0.1em #2196f3;
-}
 .header a 
 {
     text-decoration: none;
-    color: #333;
+    color: #2196f3;
 /*	font-size: 2rem; */
 	font-family: 'Anonymous Pro', monospace;
 	font-weight: lighter;
-	font-size: 2vw;
+	
 }
 .header ul li
 {
@@ -73,7 +121,6 @@ body
 .logo
 {
     font-weight: bolder;
-	margin-left: 3%;
 	text-shadow: 0.1px 0.1px 0.02em black
     
 }
@@ -88,6 +135,7 @@ body
 	height: 1.5rem;
 	cursor: pointer;
 	z-index: 1;
+	
 }
 .menu-btn__lines,
 .menu-btn__lines::before,
@@ -125,6 +173,14 @@ body
 	transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
 /*	background-color: black;*/
 }
+
+.menu-btn.open
+.menu-btn__lines::before,
+.menu-btn.open
+.menu-btn__lines::after 
+{
+	background-color: black;
+}
 .menu-items
 {
     flex-direction: column;
@@ -136,7 +192,7 @@ body
 	height: 100vh;
 	transform: translateX(100vw);
 	background-color: #fff;
-	transition: transform 0.3 sease-in-out;
+	transition: transform 0.3s ease-in-out;
 	color:white;
 	list-style: none;
 	display: flex;
@@ -158,29 +214,10 @@ body
 	width: 100vw;
 	height: 100%;
 }
-.menu-items.lightOn li a
- {
-	display:flex;
-	position:relative;
-    color: #fff;
-    text-shadow: 0 0 10px #fff,
-                    0 0 20px #fff,
-                    0 0 40px #fff,
-                    0 0 80px #fff,
-                    0 0 120px #fff,
-                    0 0 160px #fff;
-				
-	transform: translateY(0px);
-	visibility: visible;
-	margin-right: auto;
-	transition: 4s;
-	transition-delay: 1.5s;
-	
- }
 .menu-items li a 
 {
 	color: black;
-	font-size: 5vh;
+	font-size: 16px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -206,7 +243,7 @@ section
 	flex-direction: column;
 	justify-content: center;
 	align-items: left;
-	animation: 3s meEnter;
+	
 		
 	
 }
@@ -214,27 +251,22 @@ section
 {
     font-size: 2em;
 }
-.banner .text8x
-{
-	display:flex;
-}
 
-.banner .text8x span
-{
-	font-size: 3vw;
-	color: white;
-	font-family: 'Anonymous Pro', monospace;
-	
-	
-}
+
 .fancy
 {
 	visibility: hidden;
-    color: white;
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 120px #fff,
+                    0 0 160px #fff;
     font-size: 5.9vw;
 	display: flex;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: center;
 	align-items: left;
 	-webkit-box-reflect: below 0.5px linear-gradient(transparent,#0005);
 	
@@ -244,8 +276,7 @@ section
 {
 	visibility: visible;
     opacity: 0;
-    transition: all 1s ease;
-    transform: translateY(50px);
+    transition: all 10s ease;
     display: flex; 
 }
 
@@ -254,67 +285,8 @@ section
     transform: translateY(0px);
 	visibility: visible;
 	-webkit-transition: 0.5s ease-in-out;
-	transition: 0.5s cubic-bezier(.19,1,.19,3.51);
+	transition: 1s cubic-bezier(.19,1,.19,3.51);
 	
-}
-.fancy span.fade:hover
-{
-	-moz-transform: rotate3d(0,1,0,180deg);
-    -webkit-transform: rotate3d(0,1,0,180deg);
-    -ms-transform: rotate3d(0,1,0,180deg);
-    transform: rotate3d(0,1,0,180deg);
-	
-}
-.changecolor span
-{
-	visibility: visible;
-    transition: all 1s ease;
-    display: flex;
-}
-.changecolor .fancy
-{
-	color: black;
-	-webkit-transition: 3s;
-	transition: 3s;
-	text-shadow: 1px 1px 0.1em black;
-	
-}
-.changecolor .fancy:hover
-{
-	-webkit-transform: rotateY(180);
-	transform: rotateY(180);
-}
-.changecolor
-{
-	
-	display:flex;
-	position:relative;
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-				
-	transform: translateY(0px);
-	visibility: visible;
-	-webkit-box-reflect: below 0.1px linear-gradient(transparent,#0005);
-	margin-right: auto;
-	transition: 1.5s;
-	letter-spacing: 0.4em;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	margin-left: -1rem;
-	border-radius: 34px;
-	justify-content: space-around;
-}
-@keyframes meEnter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .btn
 {
@@ -449,7 +421,7 @@ section
 .contactInfo h3
 {
 	color: #fff;
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: 500;
 	margin-bottom: 10px;
 }
@@ -583,4 +555,85 @@ section
 	text-align: center;
 	padding: 10px;
 	color:#626262;
+	font-size: 12px;
+}
+@media (min-width: 991px)
+{
+	.header
+	{
+		justify-content: space-around;
+		padding: 0.5rem 2rem;
+		align-items: center;
+	}
+	.header a
+	{
+		color: white;
+	}
+	.menu-btn
+	{
+		display: none;
+	}
+	.menu-items
+	{
+		transform: translateX(0vw);
+		flex-direction: row;
+		height: auto;
+		display: flex;
+		margin-right: auto;
+		transform: translateY(0px);
+		background: none;
+		margin-left: 30%;
+		margin-right: 10%;
+		height: auto;
+		
+	}
+	.menu-items li a
+	{
+		color: white;
+		font-size: 1.5vw;
+		
+	}
+	header.acender .menu-items li a:hover
+	{
+		text-decoration: underline;
+		
+	}
+	menu-items.open
+	{
+		transform: none;
+	}
+	.header
+	{
+	justify-content: flex-start;
+	}
+	.header a
+	{
+		font-size: 1.5vw;
+	}
+	.header.acender .menu-items li a
+	{
+		color: black;
+		padding-bottom: 30px;
+		text-shadow: 0.1px 0.1px 0.02em black
+	}
+	.header.acender .logo
+	{
+		color: blue;
+		font-size: 1.5vw;
+		
+	}
+	.logo
+	{
+		margin-left: 100px;
+		font-size: 1.5vw;
+	}
+	
+}
+@media (max-width: 600px)
+{
+	.contactInfoBx
+	{
+		flex-direction: column;
+
+	}
 }
