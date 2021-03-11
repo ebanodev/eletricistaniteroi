@@ -697,6 +697,11 @@ section
 	color:#626262;
 	font-size: 12px;
 }
+.copyright a
+{
+	text-decoration: none;
+	color: #626262;
+}
 @media (min-width: 991px)
 {
 	.header
