@@ -227,11 +227,107 @@ body
 .menu-items li a:hover {
 	color: #2196f3;
 }
+/*BOTÃO CONFIGURAÇÃO */
+
+button {
+	
+	font-size: 36px;
+	padding: 20px;
+	background: #222;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	width: 350px;
+	margin-bottom: 10vh;
+  }
+  
+  button span:nth-child(1) {
+	display: block;
+	position: absolute;
+	background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,.5), transparent 75%);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: -75%;
+  }
+  
+  button span:nth-child(2) {
+	display: block;
+	position: absolute;
+	background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,.5), transparent 75%);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: -75%;
+  }
+  
+  button:hover {
+	transition-duration: .5s;
+	transition-delay: .25s;
+	color: #fff;
+	background: #444;
+	box-shadow: 0 0 10px 10px #ffffff50,
+				0 0 15px 10px #ffffff50,
+				0 0 20px 10px #ffffff50;
+  }
+  
+  button:hover span:nth-child(1) {
+	transition: .75s;
+	left: 125%;
+  }
+  
+  button:hover span:nth-child(2) {
+	transition: .75s;
+	right: 125%;
+  }
+  
+  button:hover:focus span:nth-child(1) {
+	transition: .75s;
+	left: -75%;
+  }
+  
+  button:hover:focus span:nth-child(2) {
+	transition: .75s;
+	right: -75%;
+  }
+  
+  button:nth-child(1):hover:focus {
+	box-shadow: 0 0 10px 10px rgba(255,0,0,.75),
+				0 0 15px 10px rgba(255,0,0,.5),
+				0 0 20px 10px rgba(255,0,0,.25);
+	background: darkred;
+	text-shadow: 0 0 5px #fff,
+				 0 0 10px #fff;
+  }
+  
+  button:nth-child(2):hover:focus {
+	box-shadow: 0 0 10px 10px rgba(0,255,0,.75),
+				0 0 15px 10px rgba(0,255,0,.5),
+				0 0 20px 10px rgba(0,255,0,.25);
+	background: darkgreen;
+	text-shadow: 0 0 5px #fff,
+				 0 0 10px #fff;
+  }
+  
+  button:nth-child(3):hover:focus {
+	box-shadow: 0 0 10px 10px rgba(0,0,255,.75),
+				0 0 15px 10px rgba(0,0,255,.5),
+				0 0 20px 10px rgba(0,0,255,.25);
+	background: darkblue;
+	text-shadow: 0 0 5px #fff,
+				 0 0 10px #fff;
+  }
+
+  /*TERMINA CONFIGURAÇÃO DO BOTÃO*/
+
 section
 {
 	padding-left: 10vw;
 	padding-right: 10vw;
 	height: 100vh;
+	min-height: 400px;
 }
 .banner
 {
@@ -242,7 +338,8 @@ section
 	background-position: right;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;			
+	justify-content: space-evenly;	
+	align-items: center;		
 	
 }
 .bgbanner
@@ -307,6 +404,26 @@ section
 .about
 {
 	background:white;
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 700px;
+}
+.list
+{
+	display: flex;
+	flex-direction: row;
+	width: 80vw;
+	justify-content: space-around;
+	
+	position: relative;
+	
+	
+}
+.list ul li
+{
+	margin-top: 2vh;
 }
 .far fa-check-circle
 {
@@ -316,12 +433,14 @@ section
 {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 30px;
+/*	margin-bottom: 30px; */
 	color: #111;
+	margin-top: 10vh;
 }
 .heading h2
 {
 	font-size: 4.6vw;
+/*	padding-top: 10vh; TIREI PORQUE ARRUMEI COLOCANDO UM JUSTIFY NA CLASSE DA SECTION QUE EU QUERIA*/ 
 }
 .heading p
 {
@@ -334,7 +453,7 @@ section
 .contentBx h3 
 {
     font-size: 2.5vw;
-    margin-bottom: 10px;
+ /*   margin-bottom: 5vh; TIREI PORQUE ARRUMEI COLOCANDO UM JUSTIFY NA CLASSE DA SECTION QUE EU QUERIA*/
 }
 .content
 {
@@ -648,6 +767,14 @@ section
 		margin-left: 100px;
 		font-size: 1.5vw;
 	}
+	.about h3
+	{
+		font-size: 30px;
+	}
+	.list
+	{
+		font-size: 24px;
+	}
 	.testimonial .content
 	{
 		flex-wrap: nowrap;
@@ -668,5 +795,9 @@ section
 	{
 		flex-direction: column;
 
+	}
+	.list
+	{
+		flex-direction: column;
 	}
 }
