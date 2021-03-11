@@ -229,8 +229,9 @@ body
 }
 section
 {
-	padding: 10%;
-	
+	padding-left: 10vw;
+	padding-right: 10vw;
+	height: 100vh;
 }
 .banner
 {
@@ -241,15 +242,24 @@ section
 	background-position: right;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: left;
+	justify-content: center;			
 	
-		
-	
+}
+.bgbanner
+{
+	height: 50vh;
+	justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+.chamada
+{
+	text-align: center;
 }
 .banner h2
 {
-    font-size: 2em;
+    font-size: 2.5vw;
+	color: #3296f3;
 }
 
 
@@ -297,6 +307,10 @@ section
 .about
 {
 	background:white;
+}
+.far fa-check-circle
+{
+	color: green
 }
 .heading
 {
@@ -354,40 +368,47 @@ section
 .headingW h2
 {
 	font-weight: 600;
-	font-size: 4.6vw;
+	font-size: 2rem;
 }
 .testimonial
 {
 	background: #f7f7f7;
+	justify-content: space-evenly;
+	display: flex;
+	flex-direction: column;
 }
-.seuDepoimento
+.testimonial .heading
 {
-	letter-spacing: 13px;
+	margin-bottom: 0px;
 }
 .testimonial .content
 {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	
 }
 .testimonial .content .testimonialBx 
 {
 	max-width: calc(100% - 20px);
-	padding: 40px 20px;
+	padding: 20px 20px;
 	margin: 10px;
 	background: #3296f3;
-	font-size: 3vw;
+	height: 31vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .testimonial .content .testimonialBx p
 {
     color: #fff;
 	font-style: italic;
-	font-size: 3vw;
+	font-size: 1rem;
 }
 .testimonial .content .testimonialBx h3
 {
 	margin-top: 20px;
-	font-size: 2.5vw;
+	font-size: 0.8rem;
     text-align: end;
 	color: #fff;
 	font-weight: 600;
@@ -618,7 +639,7 @@ section
 	}
 	.header.acender .logo
 	{
-		color: blue;
+		color: #3296f3;
 		font-size: 1.5vw;
 		
 	}
@@ -627,7 +648,19 @@ section
 		margin-left: 100px;
 		font-size: 1.5vw;
 	}
-	
+	.testimonial .content
+	{
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+	.testimonial .content .testimonialBx 
+	{
+		max-width: calc(50% - 20px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 34vw;
+	}
 }
 @media (max-width: 600px)
 {
