@@ -239,98 +239,48 @@ a
 	color: #2196f3;
 }
 /*BOTÃO CONFIGURAÇÃO */
-
-button {
+/*
+.acao {
 	
 	font-size: 32px;
 	padding: 20px;
-	background: #222;
+	background:white;
 	border: none;
+	color: black;
 	border-radius: 10px;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	width: 350px;
 	margin-bottom: 10vh;
-  }
-  
-  button span:nth-child(1) {
-	display: block;
-	position: absolute;
-	background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,.5), transparent 75%);
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: -75%;
-  }
-  
-  button span:nth-child(2) {
-	display: block;
-	position: absolute;
-	background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,.5), transparent 75%);
-	width: 100%;
-	height: 100%;
-	top: 0;
-	right: -75%;
-  }
-  
-  button:hover {
-	transition-duration: .5s;
-	transition-delay: .25s;
-	color: #fff;
-	background: #444;
-	box-shadow: 0 0 10px 10px #ffffff50,
-				0 0 15px 10px #ffffff50,
-				0 0 20px 10px #ffffff50;
-  }
-  
-  button:hover span:nth-child(1) {
-	transition: .75s;
-	left: 125%;
-  }
-  
-  button:hover span:nth-child(2) {
-	transition: .75s;
-	right: 125%;
-  }
-  
-  button:hover:focus span:nth-child(1) {
-	transition: .75s;
-	left: -75%;
-  }
-  
-  button:hover:focus span:nth-child(2) {
-	transition: .75s;
-	right: -75%;
-  }
-  
-  button:nth-child(1):hover:focus {
-	box-shadow: 0 0 10px 10px rgba(255,0,0,.75),
-				0 0 15px 10px rgba(255,0,0,.5),
-				0 0 20px 10px rgba(255,0,0,.25);
-	background: darkred;
-	text-shadow: 0 0 5px #fff,
-				 0 0 10px #fff;
-  }
-  
-  button:nth-child(2):hover:focus {
-	box-shadow: 0 0 10px 10px rgba(0,255,0,.75),
-				0 0 15px 10px rgba(0,255,0,.5),
-				0 0 20px 10px rgba(0,255,0,.25);
-	background: darkgreen;
-	text-shadow: 0 0 5px #fff,
-				 0 0 10px #fff;
-  }
-  
-  button:nth-child(3):hover:focus {
-	box-shadow: 0 0 10px 10px rgba(0,0,255,.75),
-				0 0 15px 10px rgba(0,0,255,.5),
-				0 0 20px 10px rgba(0,0,255,.25);
-	background: darkblue;
-	text-shadow: 0 0 5px #fff,
-				 0 0 10px #fff;
-  }
+  }*/
+  .acao{
+	
+	background: #2196f3;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 0.5s;
+	Letter-spacing: 4px;
+	padding: 20px;
 
+	text-decoration: none;
+	font-size: x-large;
+	color: white;
+	font-weight: bolder;
+	border-radius: 15px;
+  }
+  .acao:hover {
+	
+		background: #2196f3;
+		color: #050801;
+		box-shadow: 0 0 5px #2196f3,
+					0 0 25px #2196f3,
+					0 0 50px #2196f3,
+					0 0 200px #2196f3;
+	
+  }
+  
   /*TERMINA CONFIGURAÇÃO DO BOTÃO*/
 
 section
@@ -344,13 +294,13 @@ section
 {
 	position: relative;
 	min-height: 100vh;
-	background: url(imagens/banner3.jpg);
-	background-size: cover;
-	background-position: right;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;	
-	align-items: center;		
+	align-items: center;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	min-height: 100vh;		
 	
 }
 .bgbanner
@@ -386,7 +336,6 @@ section
 	flex-direction: row;
 	justify-content: center;
 	align-items: left;
-	-webkit-box-reflect: below 0.5px linear-gradient(transparent,#0005);
 	
 	
 }
@@ -427,6 +376,10 @@ h3
 h2
 {
 	font-size: 32px;
+}
+p a{
+	color: black;
+	
 }
 .checklist
 {
@@ -566,6 +519,17 @@ table
 .thankyou_message
 {
 	color: green;
+}
+.social{
+	justify-content: space-around;
+	display: flex;
+	margin-top: 40px;
+}
+.social a
+{
+	color:white;
+	font-size: 19px;
+	text-decoration: none;
 }
 .contentcontato
 {
