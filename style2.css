@@ -469,6 +469,7 @@ table
 	background: transparent;
 	border: none;
 	outline: none;
+	
 	background: #222;
 	color: #fff;
 	resize: none;
@@ -485,7 +486,7 @@ table
 }
 .formBx form input[type="submit"]
 {
-	max-width: 100px;
+/*	max-width: 100px; */
 	background: #2196f3;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -497,6 +498,8 @@ table
 	transition: 0.5s;
 	Letter-spacing: 4px;
     -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+	font-weight: bolder;
+	font-size: 24px;
 }
 .formBx .reflect:hover
 {
